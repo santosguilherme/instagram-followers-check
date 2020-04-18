@@ -1,0 +1,22 @@
+{
+  "name": "instagram-followers-check",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "repository": "git@github.com:santosguilherme/instagram-followers-check.git",
+  "author": "Guilherme Santos <sntguilherme@gmail.com>",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "watch": "nodemon src/index.js",
+    "build": "node src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "lodash.differenceby": "^4.8.0",
+    "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
