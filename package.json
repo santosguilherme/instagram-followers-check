@@ -5,7 +5,6 @@
   "main": "src/index.js",
   "repository": "git@github.com:santosguilherme/instagram-followers-check.git",
   "author": "Guilherme Santos <sntguilherme@gmail.com>",
-  "license": "ISC",
   "private": true,
   "scripts": {
     "watch": "nodemon src/index.js",
