@@ -1,4 +1,7 @@
 # instagram-followers-check
+This is a simple app to try the usage of [Puppeteer](https://pptr.dev/).
+
+The app generates some lists with who are your followers, who you follow and the users who you follow and don't follow you.
 
 ## Running
 1. Create a `.env` file on the root directory.
