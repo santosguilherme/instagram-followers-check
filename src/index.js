@@ -8,17 +8,22 @@ import getFollowersAndFollowing from './getFollowersAndFollowing.mjs';
 import {createDistDirectory} from './distDirectory.mjs';
 import {write} from './jsonFile.mjs';
 
-function createOutput({following, followers}){
+function createOutput(username, datetime, {following, followers}){
   console.log(`followers: ${followers.length}`);
-  write('followers', followers);
 
   // FIXME: Flaky
   console.log(`following: ${following.length}`);
-  write('following', following);
 
-  const doNotFollowYou = differenceBy(following, followers, 'username');
-  write('result', doNotFollowYou);
-  console.log('do not follow you:', doNotFollowYou.length);
+  const result = {
+    username,
+    datetime,
+    following,
+    followers,
+    doNotFollowYou: differenceBy(following, followers, 'username'),
+  };
+
+  write(`${username}-result-${datetime}`, result);
+  console.log('do not follow you:', result.doNotFollowYou.length);
 }
 
 async function start() {
@@ -33,7 +38,7 @@ async function start() {
 
   const users = await getFollowersAndFollowing(page, {username, password});
 
-  createOutput(users);
+  createOutput(username, Date.now(), users);
 
   await browser.close();
 }

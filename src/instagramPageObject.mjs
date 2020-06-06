@@ -19,6 +19,15 @@ const loginForm = {
   }
 };
 
+const saveInformationsDialog = {
+  getSelector(){
+    return '.pV7Qt';
+  },
+  cancelButton(){
+    return 'button.sqdOP.yWX7d.y3zKF';
+  }
+};
+
 const notificationsDialog = {
   getSelector() {
     return '.piCib';
@@ -50,11 +59,14 @@ const page = {
   getLoginForm() {
     return loginForm;
   },
+  getSaveInformationsDialog(){
+    return saveInformationsDialog;
+  },
   getNotificationsDialog() {
     return notificationsDialog;
   },
-  getProfile() {
-    return '._2dbep.qNELH.kIKUG';
+  getProfile(username) {
+    return `a[href="/${username}/"]`;
   },
   getFollowers(username) {
     return `a[href="/${username}/followers/"]`;
