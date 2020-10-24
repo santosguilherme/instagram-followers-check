@@ -7,7 +7,7 @@
   "author": "Guilherme Santos <sntguilherme@gmail.com>",
   "private": true,
   "scripts": {
-    "watch": "nodemon src/index.js",
+    "dev": "nodemon src/index.js --ignore dist/",
     "build": "node src/index.js"
   },
   "dependencies": {
