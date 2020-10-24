@@ -72,6 +72,9 @@ async function getFollowing(page, username) {
 export default async function getFollowersAndFollowing(page, user) {
   await page.goto(url);
 
+  await page.waitFor(instagramPage.getCookiesDialog().getSelector());
+  await page.click(instagramPage.getCookiesDialog().getAcceptButton());
+
   await page.waitFor(instagramPage.getLoginForm().getSelector());
   await page.type(instagramPage.getLoginForm().getUsernameField(), user.username);
   await page.type(instagramPage.getLoginForm().getPasswordField(), user.password);
@@ -85,6 +88,9 @@ export default async function getFollowersAndFollowing(page, user) {
 
   await page.waitFor(instagramPage.getNotificationsDialog().getSelector());
   await page.click(instagramPage.getNotificationsDialog().getCancelNotificationsButton());
+
+  await page.click(instagramPage.openProfileMenu());
+  await page.waitFor(instagramPage.getProfile(user.username));
 
   await page.click(instagramPage.getProfile(user.username));
   await page.waitForNavigation(getUserProfileURL(user.username));

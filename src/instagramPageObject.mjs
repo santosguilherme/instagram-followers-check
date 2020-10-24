@@ -4,6 +4,15 @@ export function getUserProfileURL(username) {
   return `https://www.instagram.com/${username}/`;
 }
 
+const cookiesDialog = {
+  getSelector() {
+    return '.piCib';
+  },
+  getAcceptButton() {
+  return 'button.aOOlW.bIiDR';
+}
+};
+
 const loginForm = {
   getSelector() {
     return 'form';
@@ -56,6 +65,9 @@ const usersList = {
 };
 
 const page = {
+  getCookiesDialog(){
+    return cookiesDialog;
+  },
   getLoginForm() {
     return loginForm;
   },
@@ -64,6 +76,9 @@ const page = {
   },
   getNotificationsDialog() {
     return notificationsDialog;
+  },
+  openProfileMenu(){
+    return 'span._2dbep.qNELH';
   },
   getProfile(username) {
     return `a[href="/${username}/"]`;
