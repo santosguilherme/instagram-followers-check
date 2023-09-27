@@ -1,5 +1,5 @@
 {
-  "name": "instagram-followers-check",
+  "name": "@instagram-followers-check/crawler",
   "version": "1.0.0",
   "main": "src/index.ts",
   "repository": "git@github.com:santosguilherme/instagram-followers-check.git",
