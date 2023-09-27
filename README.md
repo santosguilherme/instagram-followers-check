@@ -18,3 +18,11 @@ yarn build
 ```
 
 1. Check the `dist` folder with the output files
+
+## Todo
+- [x] Add TypeScript
+- [ ] Move to a monorepo
+- [ ] Use Atlas Mongo to store the results
+- [ ] Fix the Flaky results
+- [ ] Add folder structure
+ 

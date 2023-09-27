@@ -1,21 +1,21 @@
-export const url = 'https://instagram.com';
+export const url = "https://instagram.com";
 
-export function getUserProfileURL(username) {
+export const getUserProfileURL = (username: string) => {
   return `https://www.instagram.com/${username}/`;
-}
+};
 
 const cookiesDialog = {
   getSelector() {
-    return '.piCib';
+    return ".piCib";
   },
   getAcceptButton() {
-  return 'button.aOOlW.bIiDR';
-}
+    return "button.aOOlW.bIiDR";
+  },
 };
 
 const loginForm = {
   getSelector() {
-    return 'form';
+    return "#loginForm";
   },
   getUsernameField() {
     return 'input[name="username"]';
@@ -25,73 +25,73 @@ const loginForm = {
   },
   getLoginButton() {
     return 'button[type="submit"]';
-  }
+  },
 };
 
 const saveInformationsDialog = {
-  getSelector(){
-    return '.pV7Qt';
+  getSelector() {
+    return "._aa55";
   },
-  cancelButton(){
-    return 'button.sqdOP.yWX7d.y3zKF';
-  }
+  cancelButton() {
+    return 'div[role="button"]';
+  },
 };
 
 const notificationsDialog = {
   getSelector() {
-    return '.piCib';
+    return "._a9-v";
   },
   getCancelNotificationsButton() {
-    return '.aOOlW.HoLwm';
-  }
+    return "button._a9--._a9_1";
+  },
 };
 
 const usersList = {
   getSelector() {
-    return '.isgrP';
+    return "._aano";
   },
   getListItem() {
-    return '.isgrP li';
+    return "div.x1dm5mii.x16mil14.xiojian.x1yutycm.x1lliihq.x193iq5w.xh8yej3";
   },
-  getUsername(){
-    return 'a.FPmhX.notranslate._0imsa';
+  getUsername() {
+    return "span._aacl._aaco._aacw._aacx._aad7._aade";
   },
-  getName(){
-    return 'div._7UhW9.xLCgt.MMzan._0PwGv.fDxYl';
+  getName() {
+    return "span.x1lliihq.x193iq5w.x6ikm8r.x10wlt62.xlyipyv.xuxw1ft";
   },
-  getFollowing(){
-    return 'button';
-  }
+  getFollowing() {
+    return "div._aacl._aacn._aacw._aad6";
+  },
 };
 
 const page = {
-  getCookiesDialog(){
+  getCookiesDialog() {
     return cookiesDialog;
   },
   getLoginForm() {
     return loginForm;
   },
-  getSaveInformationsDialog(){
+  getSaveInformationsDialog() {
     return saveInformationsDialog;
   },
   getNotificationsDialog() {
     return notificationsDialog;
   },
-  openProfileMenu(){
-    return 'span._2dbep.qNELH';
+  openProfileMenu() {
+    return "span._2dbep.qNELH";
   },
-  getProfile(username) {
+  getProfile(username: string) {
     return `a[href="/${username}/"]`;
   },
-  getFollowers(username) {
+  getFollowers(username: string) {
     return `a[href="/${username}/followers/"]`;
   },
-  getFollowing(username) {
+  getFollowing(username: string) {
     return `a[href="/${username}/following/"]`;
   },
   getUsersList() {
     return usersList;
-  }
+  },
 };
 
 export default page;
