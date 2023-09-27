@@ -25,4 +25,9 @@ yarn build
 - [ ] Use Atlas Mongo to store the results
 - [ ] Fix the Flaky results
 - [ ] Add folder structure
- 
+
+## Links
+- https://pptr.dev/
+- https://github.com/jrdavismaine/puppeteer-api-typescript-examples
+- https://www.scrapingbee.com/blog/infinite-scroll-puppeteer/
+- https://www.youtube.com/watch?v=nDBdvqRWvCw
